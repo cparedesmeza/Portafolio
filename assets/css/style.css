@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet');
+
+:root{
+    --text-color: #ffff;
+    --text-color-secondary: #21221D;
+    --font-family: 'Noto Serif',Serif;
+    --button-color: #FCBF5A;
+}
+body{
+    font-family: var(--font-family) !important;
+    color: var(--text-color);
+    background: black !important;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+.navbar{
+    position: fixed;
+    top: 52rem;
+    left: 1rem;
+    max-width: fit-content;
+    background-color: rgb(33,34,29,0.7);
+    padding: 0.5rem;
+    border-radius: 10px;
+    box-shadow: inset 3px 3px 0px rgba(57, 57, 56, 0.8);
+    z-index: 1;
+    font-size: clamp(16px,4vw +1rem,30px);
+    display: flex;
+    flex-direction: row;
+}
+.navbar-nav{
+  display:flex;
+  flex-direction: row;
+  gap:30px;
+  list-style: none;
+  
+}
+.nav-link{
+    text-decoration: none;
+    color: var(--text-color) !important;
+    text-transform: uppercase;
+}
+.btn-header{
+    text-decoration: none;
+    color: var(--text-color-secondary);
+    background-color: var(--button-color);
+    padding: 1rem;
+    border-radius: 10px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+.overlay {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.825);
+  overflow: hidden;
+}
+.overlay-slide-right {
+  transition: all 0.8s ease-In-out;
+  transform: translateX(0) translateY(0);
+}
+.overlay-slide-left {
+  transition: all 0.8s ease-in-out;
+  transform: translateX(-100%) translateY(-100%);
+}
+
+/*Scroll Panel*/
+.container-horizontal {
+  display: flex;
+  height: 930vh; /* Ocupa toda la altura de la ventana */
+  width: 100vw; /* Ancho total para 4 paneles */
+  overflow-x: visible; /* Evita que aparezcan barras de desplazamiento no deseadas */
+  scroll-snap-type: x mandatory; /* Activa el ajuste de desplazamiento */
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilos para cada panel */
+.panel {
+    flex: 0 0 100vw; /* Cada panel ocupa todo el ancho de la ventana */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start; /* Alineación para el ajuste de desplazamiento */
+}
+
+
+/* Section: Slider */
+
+.slider{
+  background-image: url('/assets/images/Background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display:flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+.btnResume{
+  text-decoration:none;
+  border: solid #FCBF5A;
+  background: transparent;
+  border-radius: 10px;
+  color:#FCBF5A;
+  font-size: 25px;
+  text-transform: uppercase;
+  padding: 1px 30px;
+  margin: 0px 20rem;
+}
+.title{
+  font-size: 5rem;
+  margin: 0px 20rem;
+  color:white;
+}
+.subtitle{
+  font-size: 6rem;
+  margin: 0px 20rem;
+  line-height: 2.2rem;
+  color:white;
+}
+#typed-output{
+  font-size: 3rem;
+  height: 4rem;
+  margin: 2rem 20rem;
+  color:white;
+}
+.dot {
+  background-color: white;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  position: absolute;
+}
+
+/* Section2: aboutMe*/
+.aboutMe{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap:100px;
+  padding: 50px 0px;
+}
+.img-wrap{
+  max-width: 50%;
+}
+.img-wrap img{
+  width: 100%;
+  animation: opacityCycle 5s infinite;
+}
+@keyframes opacityCycle {
+  0% {
+    opacity: 0.2; /* Brillo bajo */
+}
+50% {
+    opacity: 0.5; /* Brillo alto */
+}
+100% {
+    opacity: 0.2; /* Vuelve a brillo bajo */
+}
+}
+.content{
+  max-width: 50%;
+}
+.content-title{
+  font-size: 7rem;
+  margin-bottom: 3rem;
+  line-height: 7rem;
+}
+.dotColor{
+  color: var(--button-color)
+}
+.content-paragraph{
+  font-size: 1.2rem;
+  text-align: justify;
+}
+/* Section3: Works*/
+.works{
+  padding: 10rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  gap: 25px;
+  box-shadow:inset 0px 5px 5px rgba(0,0,0,0.7), inset 0px -5px 5px rgba(0,0,0,0.7);
+  
+}
+.works-title{
+  font-size: 7rem;
+  color: var(--text-color-secondary);
+  margin:0;
+}
+.projects{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+}
+.projectContent{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 3rem;
+}
+.projects-paragraph{
+  max-width:50%;
+  font-size: 1.2rem;
+  text-align: justify;
+  color: var(--text-color-secondary);
+}
+.projects-icons{
+  max-width: 50%;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(4,100px);
+  gap: 0;
+  color: var(--text-color-secondary)
+}
+.material-icons{
+  font-size: 48px;
+  color: var(--text-color-secondary);
+}
+.swiper-slide{
+  max-width: 400px;
+  max-height: 400px;
+  box-shadow: 0px 5px 5px rgb(0,0,0,0.5);
+  margin: 20px 0px;
+}
+.swiper-slide img{
+  width: 400px;
+  height: 400px;
+}
+
+/*Section 4*/
+.FAQS-container{
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap:100px;
+}
+.faqs-title{
+  font-size: 7rem;
+  margin: 0;
+  color:white;
+}
+.faqs-content{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.dropdown {
+  width: 50%;
+  max-height: 620px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+.img-wrap-FAQS{
+  width: 620px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-wrap-FAQS img{
+  width: 100%;
+}
+
+.dropbtn0 {
+  background-color: white; /* Color de fondo del botón */
+  color: var(--text-color-secondary); /* Color del texto */
+  padding: 10px 10rem; /* Espaciado */
+  font-size: 1.2rem; /* Tamaño de fuente */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cursor de mano */
+  border-radius: 10px;
+}
+
+.dropdown-content {
+  display: none; /* Oculto por defecto */
+  padding: 10px 8rem; /* Espaciado */
+  background-color: var(--button-color);
+  opacity: 0.5;
+  color: var(--text-color-secondary); /* Color del texto */
+  min-width: 160px; /* Ancho mínimo */
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+
+
