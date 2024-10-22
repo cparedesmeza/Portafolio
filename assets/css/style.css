@@ -305,40 +305,175 @@ body{
 }
 
 /* Media Querys*/
-/* Dispositivos pequeños (móviles) - hasta 576px */
-@media (max-width: 576px) {
-  /* Estilos para móviles */
-}
 
-/* Dispositivos medianos (tablets) - de 577px a 768px */
-@media (min-width: 577px) and (max-width: 768px) {
-  /* Estilos para tablets */
-}
-
-/* Dispositivos grandes (laptops pequeños) - de 769px a 992px */
-@media (min-width: 769px) and (max-width: 992px) {
-  /* Estilos para laptops pequeños */
-}
-
-/* Dispositivos extra grandes (laptops y monitores de escritorio) - de 993px a 1200px */
-@media (min-width: 993px) and (max-width: 1200px) {
- 
-}
 
 /* Dispositivos extra extra grandes (monitores grandes) - más de 1200px */
-@media (max-width: 1510px) {
-  .container-horizontal {
-    height: 970vh; /* Ocupa toda la altura de la ventana */
-    width: 100vw; /* Ancho total para 4 paneles */
-    border: solid white;
+@media (max-width: 768px) {
+  .navbar{
+    position: fixed;
+    top: 38.5rem;
+    left:1rem;
   }
+  .title{
+    font-size: 4rem;
+    margin: 0px 10rem;
+  }
+  .subtitle{
+    font-size: 5rem;
+    margin: 0px 10rem;
+    line-height: 1rem;
+  }
+  #typed-output{
+    font-size: 2rem;
+    height: 3rem;
+    margin: 2rem 10rem;
+  }
+  .btnResume{
+    margin: 0 10rem;
+    font-size: 20px;
+  }
+  .aboutMe{
+    gap:0;
+  }
+  .content{
+    width: 60%;
+  }
+  .content-title{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    line-height: 2.4rem;
+  }
+  .img-wrap{
+    width: 50%;
+    margin-left: -10rem;
+  }
+  .content-paragraph{
+    font-size: 1rem;
+    text-align: justify;
+  }
+  .works{
+    padding: 0;
+  }
+  .projects-paragraph{
+    max-width:50%;
+    font-size: 1rem;
+    text-align: justify;
+    color: var(--text-color-secondary);
+  }
+  .projects-icons{
+    max-width: 50%;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3,100px);
+    gap: 0;
+    color: var(--text-color-secondary)
+  }
+  .material-icons{
+    font-size: 48px;
+    color: var(--text-color-secondary);
+  }
+  .swiper-slide{
+    width: 150px;
+    height: 150px;
+    margin: 0;
+    
+  }
+  .swiper-slide img{
+    width: 150px;
+    height: 150px;
+  }
+  .FAQS-container{
+    align-items: start;
+    margin-left: 3rem;
+  }
+  .faqs-content{
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: start;
+  }
+  .img-wrap-FAQS{
+    display: none;
+  }
+  .dropbtn0 {
+    width: 100%;
+    height: 50px;
+  }
+  .dropdown-content {
+    width: 100%; /* Ancho mínimo */
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  .container-horizontal {
+    height: 500vh; /* Ocupa toda la altura de la ventana */
+    width: 100vw; /* Ancho total para 4 paneles */    
+  }
+  
+  /* Estilos para cada panel */
   .panel {
       flex: 0 0 90vw; /* Cada panel ocupa todo el ancho de la ventana */
       height: 100vh; /* Ocupa toda la altura de la ventana */
-  }
+   }
+
+
+
+
+
+}
+
+@media (max-width: 600px) {
   .navbar{
-    position: fixed;
-    top: 1rem !important;
-    left:1rem;
+    top: 36.5rem;
   }
+  .title{
+    font-size: 3rem;
+    margin: 0px 5rem;
+  }
+  .subtitle{
+    font-size: 4rem;
+    margin: 0px 5rem;
+    line-height: 1rem;
+  }
+  #typed-output{
+    font-size: 1.5rem;
+    height: 3rem;
+    margin: 1rem 5rem;
+  }
+  .btnResume{
+    margin: 0 5rem;
+    font-size: 0.8rem;
+  }
+  .aboutMe{
+    flex-direction: row-reverse;
+  }
+  .content{
+    width: 100%;
+  }
+  .content-title{
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    line-height: 2rem;
+  }
+  .img-wrap{
+    width: 100%;
+  }
+  .content-paragraph{
+    font-size: 0.5rem;
+    text-align: justify;
+  }
+  .container-horizontal {
+    height: 1500vh; /* Ocupa toda la altura de la ventana */
+    width: 1000vw; /* Ancho total para 4 paneles */    
+  }
+  
+  /* Estilos para cada panel */
+  .panel {
+      flex: 0 0 100vw; /* Cada panel ocupa todo el ancho de la ventana */
+      height: 100vh; /* Ocupa toda la altura de la ventana */
+   }
+
+
+
+
+
 }
