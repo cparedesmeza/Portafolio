@@ -212,7 +212,7 @@ body{
   flex-direction: row;
 }
 .projects-paragraph{
-  max-width:50%;
+  width:50%;
   font-size: 1.1rem;
   text-align: justify;
   color: var(--text-color-secondary);
@@ -479,6 +479,7 @@ body{
   }
   .projects-paragraph{
     font-size: 0.8rem;
+    width: 100%;
   }
   .container-horizontal {
     height: 370vh; /* Ocupa toda la altura de la ventana */
@@ -494,8 +495,13 @@ body{
       font-size: 0.7rem;
    }
 
-
-
-
-
+}
+@media (max-width:400) {
+  .container-horizontal {
+    height: 1vh; /* Ocupa toda la altura de la ventana */
+    width: 100vw; /* Ancho total para 4 paneles */    
+  }
+  .projects-paragraph{
+    width: 100%;
+  }
 }

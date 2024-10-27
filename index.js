@@ -43,8 +43,10 @@ window.addEventListener('load', function () {
     breakpoints:{
       400:{
         slidesPerView: 2,
-
-      }
+      },
+      200:{
+        slidesPerView: 1,
+      },
     }
   });
 
