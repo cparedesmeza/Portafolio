@@ -23,7 +23,7 @@ window.addEventListener('load', function () {
     scrollTrigger: {
       trigger: ".container-horizontal",
       pin: true, // Fija el contenedor mientras se hace scroll
-      scrub: 0.5, // Hace el desplazamiento suave
+      scrub: 0.7, // Hace el desplazamiento suave
       start: "top top", // Inicia la animación cuando la parte superior del contenedor está en la parte superior de la ventana
       end: () => "+=" + window.innerWidth * document.querySelectorAll(".panel").length // Extiende la animación
     }
@@ -40,6 +40,12 @@ window.addEventListener('load', function () {
       el: ".swiper-pagination",
       clickable: true,
     },
+    breakpoints:{
+      400:{
+        slidesPerView: 2,
+
+      }
+    }
   });
 
   //DROPDOWN SECTION: FAQS

@@ -306,8 +306,11 @@ body{
 
 /* Media Querys*/
 
-
-/* Dispositivos extra extra grandes (monitores grandes) - más de 1200px */
+@media (min-width: 1920px){
+  .navbar{
+    top:52rem;
+  }
+}
 @media (max-width: 768px) {
   .navbar{
     position: fixed;
@@ -423,7 +426,7 @@ body{
 
 @media (max-width: 600px) {
   .navbar{
-    top: 36.5rem;
+    top: 38rem;
   }
   .title{
     font-size: 3rem;
@@ -458,18 +461,37 @@ body{
     width: 100%;
   }
   .content-paragraph{
-    font-size: 0.5rem;
+    font-size: 0.7rem;
+    padding: 5px;
     text-align: justify;
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+  }
+  .works{
+    padding: 0;
+  }
+  .projects{
+    width: 400px;
+    height: 400px;
+  }
+  .projects-icons{
+    display: none;
+  }
+  .projects-paragraph{
+    font-size: 0.8rem;
   }
   .container-horizontal {
-    height: 1500vh; /* Ocupa toda la altura de la ventana */
-    width: 1000vw; /* Ancho total para 4 paneles */    
+    height: 370vh; /* Ocupa toda la altura de la ventana */
+    width: 100vw; /* Ancho total para 4 paneles */    
   }
   
   /* Estilos para cada panel */
   .panel {
       flex: 0 0 100vw; /* Cada panel ocupa todo el ancho de la ventana */
       height: 100vh; /* Ocupa toda la altura de la ventana */
+   }
+   .dropbtn0, .dropdown-content{
+      font-size: 0.7rem;
    }
 
 
