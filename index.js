@@ -45,7 +45,7 @@ window.addEventListener('load', function () {
         slidesPerView: 2,
       },
       200:{
-        slidesPerView: 1,
+        slidesPerView: 2,
       },
     }
   });

@@ -496,11 +496,15 @@ body{
    }
 
 }
-@media (max-width:400) {
+@media (max-width:400px) {
   .container-horizontal {
-    height: 1vh; /* Ocupa toda la altura de la ventana */
+    height: 305vh; /* Ocupa toda la altura de la ventana */
     width: 100vw; /* Ancho total para 4 paneles */    
   }
+  .panel {
+    flex: 0 0 100vw; /* Cada panel ocupa todo el ancho de la ventana */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+ }
   .projects-paragraph{
     width: 100%;
   }
