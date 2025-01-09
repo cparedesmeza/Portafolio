@@ -9,47 +9,32 @@ window.addEventListener('load', function () {
     loop: true,       // Hace que el texto se repita en bucle
     showCursor: false, // Muestra el cursor intermitente
   });
-  /* Codigo para página horizontal */
-  // Registro de ScrollTrigger
-  gsap.registerPlugin(ScrollTrigger);
 
-  // Asegúrate de que el contenedor comience en la posición correcta
-  gsap.set(".container-horizontal", { x: 0 });
 
-  // Configura la animación para el desplazamiento horizontal
-  gsap.to(".container-horizontal", {
-    xPercent: -100 * (document.querySelectorAll(".panel").length - 1), // Mueve las secciones al 100% por cada una
-    ease: "none",
-    scrollTrigger: {
-      trigger: ".container-horizontal",
-      pin: true, // Fija el contenedor mientras se hace scroll
-      scrub: 0.7, // Hace el desplazamiento suave
-      start: "top top", // Inicia la animación cuando la parte superior del contenedor está en la parte superior de la ventana
-      end: () => "+=" + window.innerWidth * document.querySelectorAll(".panel").length // Extiende la animación
-    }
-  });
+
 
 
   /* Swiper  */
-  var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 4,
-    spaceBetween: 50,
-    loop: true,
-    autoplay:{ delay: 2000},
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    breakpoints:{
-      400:{
-        slidesPerView: 2,
-      },
-      200:{
-        slidesPerView: 2,
-      },
-    }
-  });
 
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      mousewheel: true,
+      loop:true,
+      centeredSlides: false,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 100,
+        stretch: 10,
+        depth: 20,
+        modifier: 1,
+        slideShadows: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
   //DROPDOWN SECTION: FAQS
   let btns = {
     faq1Btn: document.getElementById('dropdownBtn1'),
@@ -89,14 +74,5 @@ window.addEventListener('load', function () {
     dropdown('contentFaq5');
   });
 
-
-  function showModal(){
-    const overlay = document.querySelector("#overlay");
-    if (overlay.classList.contains("overlay-active")) {
-      overlay.classList.replace("overlay-slide-right", "overlay-slide-left");
-      overlay.classList.remove("overlay-active")
-      menu.classList.remove("active");
-    }
-  }
 });
 

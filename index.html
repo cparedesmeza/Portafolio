@@ -2,168 +2,225 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio Carlos Paredes</title>
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <script type="module" src="/index.js"></script>
-
-  <!--Libraries-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./assets/css/style.css">
+  
+  <script type="module" src="./index.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Demo styles -->
 </head>
 
 <body>
-
-  <nav class="navbar">
-
-<!--     <ul class="navbar-nav">
-      <li>
-        <a class="nav-link" href="#">home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#aboutMe">about</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#works">works</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#faqs">faq's</a>
-      </li>
-    </ul> -->
-
-    <a href="https://wa.me/+524776483666" class="btn-header" target="_blank">Let's Talk</a>
-
-  </nav>
-
-  <div class="container-horizontal">
-    <section class="slider panel">
-        <h3 class="title">Carlos</h3>
-        <h1 class="subtitle">Paredes</h1>
-        <div id="typed-output"></div>
-        <a href="./assets/files/CV Carlos Paredes UX-Front End Developer.pdf" download="CV Carlos Paredes UX-Front End Developer" class="btnResume">Resume</a>
-        <div class="dot"></div>
-    </section>
-
-    <section class="aboutMe panel" id="aboutMe">
-      <div class="img-wrap">
-        <img src="./assets/images/foco.png" alt="">
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <section class="slider">
+          <h3 class="title">Carlos</h3>
+          <h1 class="subtitle">Paredes</h1>
+          <div id="typed-output"></div>
+          <a href="./assets/files/CV Carlos Paredes UX-Front End Developer.pdf"
+            download="CV Carlos Paredes UX-Front End Developer" class="btnResume">Resume</a>
+          <div class="dot"></div>
+        </section>
       </div>
-      <div class="content">
-        <h1 class="content-title">Web Designer <br/> & Develoment <span class="dotColor">.</span>
-        </h1>
-        <p class="content-paragraph">"Soy un desarrollador web apasionado con un enfoque en la creación de experiencias digitales atractivas y funcionales. Después de cambiar de carrera al campo de la programación, he trabajado intensamente en desarrollar mis habilidades en tecnologías front-end y back-end, incluyendo JavaScript, React, Angular y Node.js. Me gusta resolver problemas y aprender continuamente nuevas tecnologías para estar al tanto de las tendencias del desarrollo web. 
-        <br/> Busco oportunidades para aplicar mis conocimientos en proyectos desafiantes y contribuir al crecimiento de equipos dinámicos."</p>
+      <div class="swiper-slide">
+        <section class="aboutMe panel" id="aboutMe">
+          <div class="img-wrap">
+            <img src="./assets/images/foco.png" alt="">
+          </div>
+          <div class="content">
+            <h1 class="content-title">Web Designer <br /> & Develoment <span class="dotColor">.</span>
+            </h1>
+            <p class="content-paragraph">"Soy un desarrollador web apasionado con un enfoque en la creación de experiencias
+              digitales atractivas y funcionales. Después de cambiar de carrera al campo de la programación, he trabajado
+              intensamente en desarrollar mis habilidades en tecnologías front-end y back-end, incluyendo JavaScript, React,
+              Angular y Node.js. Me gusta resolver problemas y aprender continuamente nuevas tecnologías para estar al tanto
+              de las tendencias del desarrollo web.
+              <br /> Busco oportunidades para aplicar mis conocimientos en proyectos desafiantes y contribuir al crecimiento
+              de equipos dinámicos."
+            </p>
+          </div>
+        </section>
       </div>
-    </section>
+      <div class="swiper-slide">
+        <section class="works panel" id="works">
 
-    <section class="works panel" id="works">
-          <h1 class="works-title"> Works<span class="dotColor">.</span></h1>
+          <h1 class="works-title">Works<span class="dotColor">.</span></h1>
           <div class="projects">
-            <div class="swiper mySwiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <a href="https://hauskor.onrender.com" target="_blank" rel="noopener noreferrer">
-                    <img src="./assets/images/project1.jpeg" alt="hauskor">
-                  </a>
-                 
-                </div>
-                <div class="swiper-slide">
-                  <a href="https://peliculasdb.onrender.com" target="_blank" rel="noopener noreferrer">
-                    <img src="./assets/images/project2.jpg" alt="">
-                  </a>
-                  
-                </div>
-                <div class="swiper-slide">
-                  <a href="https://thegermanlabs.com" target="_blank" rel="noopener noreferrer">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7yQSTIFBce1GzYAo42HhhWk8N4JSbjq42iw&s" alt="">
-                  </a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="https://capsmesofrance.com/inicio" target="_blank" rel="noopener noreferrer">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdNekNE2bYKYQPa2jZlzb5J5FoMpaPqx2eZQ&s" alt="">
-                  </a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="https://evoprimenutrition.com/inicio/" target="_blank" rel="noopener noreferrer">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBSafiMr1ldL_1N99rCCizNnNdJHboL7wXTg&s" alt="">
-                  </a>
-                </div>
+            <div class="grid">
+              <div class="grid-element">
+                <a href="https://cursos.mesofrance.com/" target="_blank" rel="noopener noreferrer">
+                  <img src="https://cursos.mesofrance.com/wp-content/uploads/2024/02/Logo-Mesofrance-M-55x63.webp" alt="hauskor">
+                </a>
               </div>
-              <div class="swiper-pagination"></div>
+              <div class="grid-element">
+                <a href="https://top-man-mx.com/inicio/" target="_blank" rel="noopener noreferrer">
+                  <img src="https://top-man-mx.com/wp-content/uploads/2025/01/Top-Man-Logo-Negro.png" alt="">
+                </a>
+              </div>
+              <div class="grid-element">
+                <a href="https://eurolab.co/" target="_blank" rel="noopener noreferrer">
+                  <img src="https://eurolabmexico.com/wp-content/uploads/2021/06/IMAGEN.jpg" alt="">
+                </a>
+              
+              </div>
+              <div class="grid-element">
+                <a href="https://thegermanlabs.com" target="_blank" rel="noopener noreferrer">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7yQSTIFBce1GzYAo42HhhWk8N4JSbjq42iw&s" alt="">
+                </a>
+              </div>
+              <div class="grid-element">
+                <a href="https://capsmesofrance.com/inicio" target="_blank" rel="noopener noreferrer">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdNekNE2bYKYQPa2jZlzb5J5FoMpaPqx2eZQ&s" alt="">
+                </a>
+              </div>
+              <div class="grid-element">
+                <a href="https://evoprimenutrition.com/inicio/" target="_blank" rel="noopener noreferrer">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBSafiMr1ldL_1N99rCCizNnNdJHboL7wXTg&s" alt="">
+                </a>
+              </div>
             </div>
           </div>
-          <div class="projectContent">
-            <p class="projects-paragraph">A continuación, presento una selección de mis proyectos que abarcan una variedad de tecnologías y enfoques de desarrollo web. Cada proyecto refleja mi habilidad para resolver problemas, mi atención al detalle y mi enfoque en la creación de experiencias de usuario intuitivas y eficientes. Desde aplicaciones front-end modernas con marcos como React y Angular, hasta servicios backend robustos con Node.js, cada uno de estos proyectos me ha permitido aprender y crecer como desarrollador. Estoy orgulloso del progreso que he logrado y siempre busco nuevas formas de mejorar mis habilidades y enfrentar nuevos desafíos.
-            </p>
-            <div class="projects-icons">
-              <i class="material-icons">javascript</i>
-              <i class="material-icons">html</i>
-              <i class="material-icons">wordpress</i>
-              <i class="material-icons">css</i>
-              <i class="material-icons">photoshop</i>
-              <span>React</span>
-              <span>Angular</span>
-              <span>MongoDB</span>
-              <span>Figma</span>
-              <span>Nodejs</span>
-              <span>Hostinger</span>
-              <span>SQL Server</span>
-              <span>RENDER</span>
-            </div>
-          </div>
-
-    </section>
-
-    <section class="FAQS-container panel" id="faqs">
-      <h1 class="faqs-title">FAQS<span class="dotColor">.</span></h1>
-      <div class="faqs-content">
-        <div class="dropdown">
-        <button class="dropbtn0" id="dropdownBtn1">¿Qué tecnologías utilizas para desarrollar proyectos web?</button>
-        <div class="dropdown-content" id="dropdown-content1">
-            <p>Utilizo una variedad de tecnologías tanto para el front-end como para el back-end. En el front-end, suelo trabajar con HTML, CSS, JavaScript, y frameworks modernos como React y Angular. Para el back-end, tengo experiencia con Node.js y Express, así como en la integración de bases de datos como MongoDB y MySQL. Me mantengo actualizado con las últimas tendencias en desarrollo web para ofrecer soluciones eficientes y modernas.</p>
-        </div>
-        <button class="dropbtn0" id="dropdownBtn2">Qué experiencia tienes trabajando en proyectos reales?</button>
-        <div class="dropdown-content" id="dropdown-content2">
-            <p>He trabajado en diversos proyectos personales y colaborativos que simulan situaciones reales del entorno laboral. Estos proyectos incluyen la creación de aplicaciones web interactivas, la integración de APIs, el despliegue de aplicaciones en servicios en la nube, y la implementación de sistemas de autenticación. Cada proyecto ha mejorado mis habilidades en desarrollo web y me ha permitido aplicar mis conocimientos para resolver problemas específicos.
-
-            </p>
-        </div>
-        <button class="dropbtn0" id="dropdownBtn3">¿Cómo abordas la resolución de problemas en el desarrollo?</button>
-        <div class="dropdown-content" id="dropdown-content3">
-            <p>Mi enfoque para resolver problemas se basa en dividir el problema en partes más pequeñas y manejables. Investigo posibles soluciones y hago uso de documentación oficial, comunidades en línea y recursos técnicos. Si me encuentro con un bloqueo, no dudo en buscar apoyo o colaborar con otros desarrolladores para encontrar una solución eficaz.
-
-            </p>
-        </div>
-        <button class="dropbtn0" id="dropdownBtn4">¿Cuál es tu proceso de trabajo al desarrollar un nuevo proyecto?</button>
-        <div class="dropdown-content" id="dropdown-content4">
-            <p>Mi proceso comienza con una fase de planificación, donde identifico los requisitos del proyecto y defino los objetivos. Luego, paso a la creación de wireframes o prototipos para visualizar la estructura de la aplicación. Durante la fase de desarrollo, trabajo en iteraciones, implementando funcionalidades y probando cada componente para asegurarme de que todo funcione correctamente. Por último, realizo pruebas exhaustivas y optimizo el código antes de desplegar el proyecto.</p>
-        </div>
-        <button class="dropbtn0" id="dropdownBtn5">¿Cómo te mantienes actualizado en el campo del desarrollo web?</button>
-        <div class="dropdown-content" id="dropdown-content5">
-            <p>Me mantengo actualizado a través de cursos en línea, la lectura de blogs técnicos y la participación en comunidades de desarrollo como GitHub y Stack Overflow. También asisto a eventos y webinars relacionados con la programación, lo cual me ayuda a estar al día con las nuevas tecnologías y prácticas recomendadas en la industria.</p>
-        </div>
-        </div>
-        <div class="img-wrap-FAQS">
-        <img src="./assets/images/CarlosParedes.png" alt="carlos">
+      
+      
+      <div class="projectContent">
+        <p class="projects-paragraph">A continuación, presento una selección de mis proyectos que abarcan una variedad de
+          tecnologías y enfoques de desarrollo web. Cada proyecto refleja mi habilidad para resolver problemas, mi atención
+          al detalle y mi enfoque en la creación de experiencias de usuario intuitivas y eficientes. Desde aplicaciones
+          front-end modernas con marcos como React y Angular, hasta servicios backend robustos con Node.js, cada uno de
+          estos proyectos me ha permitido aprender y crecer como desarrollador. Estoy orgulloso del progreso que he logrado
+          y siempre busco nuevas formas de mejorar mis habilidades y enfrentar nuevos desafíos.
+        </p>
+        <div class="projects-icons">
+          <i class="material-icons">javascript</i>
+          <i class="material-icons">html</i>
+          <i class="material-icons">wordpress</i>
+          <i class="material-icons">css</i>
+          <i class="material-icons">photoshop</i>
+          <span>React</span>
+          <span>Angular</span>
+          <span>MongoDB</span>
+          <span>Figma</span>
+          <span>Nodejs</span>
+          <span>Hostinger</span>
+          <span>SQL Server</span>
+          <span>RENDER</span>
         </div>
       </div>
-    </section>
+      
+        </section>
+      </div>
+      <div class="swiper-slide">
+        <section class="FAQS-container panel" id="faqs">
+          <h1 class="faqs-title">FAQS<span class="dotColor">.</span></h1>
+          <div class="faqs-content">
+            <div class="dropdown">
+              <button class="dropbtn0" id="dropdownBtn1">¿Qué tecnologías utilizas para desarrollar proyectos web?</button>
+              <div class="dropdown-content" id="dropdown-content1">
+                <p>Utilizo una variedad de tecnologías tanto para el front-end como para el back-end. En el front-end, suelo
+                  trabajar con HTML, CSS, JavaScript, y frameworks modernos como React y Angular. Para el back-end, tengo
+                  experiencia con Node.js y Express, así como en la integración de bases de datos como MongoDB y MySQL. Me
+                  mantengo actualizado con las últimas tendencias en desarrollo web para ofrecer soluciones eficientes y
+                  modernas.</p>
+              </div>
+              <button class="dropbtn0" id="dropdownBtn2">Qué experiencia tienes trabajando en proyectos reales?</button>
+              <div class="dropdown-content" id="dropdown-content2">
+                <p>He trabajado en diversos proyectos personales y colaborativos que simulan situaciones reales del entorno
+                  laboral. Estos proyectos incluyen la creación de aplicaciones web interactivas, la integración de APIs, el
+                  despliegue de aplicaciones en servicios en la nube, y la implementación de sistemas de autenticación. Cada
+                  proyecto ha mejorado mis habilidades en desarrollo web y me ha permitido aplicar mis conocimientos para
+                  resolver problemas específicos.
+        
+                </p>
+              </div>
+              <button class="dropbtn0" id="dropdownBtn3">¿Cómo abordas la resolución de problemas en el desarrollo?</button>
+              <div class="dropdown-content" id="dropdown-content3">
+                <p>Mi enfoque para resolver problemas se basa en dividir el problema en partes más pequeñas y manejables.
+                  Investigo posibles soluciones y hago uso de documentación oficial, comunidades en línea y recursos técnicos.
+                  Si me encuentro con un bloqueo, no dudo en buscar apoyo o colaborar con otros desarrolladores para encontrar
+                  una solución eficaz.
+        
+                </p>
+              </div>
+              <button class="dropbtn0" id="dropdownBtn4">¿Cuál es tu proceso de trabajo al desarrollar un nuevo
+                proyecto?</button>
+              <div class="dropdown-content" id="dropdown-content4">
+                <p>Mi proceso comienza con una fase de planificación, donde identifico los requisitos del proyecto y defino
+                  los objetivos. Luego, paso a la creación de wireframes o prototipos para visualizar la estructura de la
+                  aplicación. Durante la fase de desarrollo, trabajo en iteraciones, implementando funcionalidades y probando
+                  cada componente para asegurarme de que todo funcione correctamente. Por último, realizo pruebas exhaustivas
+                  y optimizo el código antes de desplegar el proyecto.</p>
+              </div>
+              <button class="dropbtn0" id="dropdownBtn5">¿Cómo te mantienes actualizado en el campo del desarrollo
+                web?</button>
+              <div class="dropdown-content" id="dropdown-content5">
+                <p>Me mantengo actualizado a través de cursos en línea, la lectura de blogs técnicos y la participación en
+                  comunidades de desarrollo como GitHub y Stack Overflow. También asisto a eventos y webinars relacionados con
+                  la programación, lo cual me ayuda a estar al día con las nuevas tecnologías y prácticas recomendadas en la
+                  industria.</p>
+              </div>
+            </div>
+            <div class="img-wrap-FAQS">
+              <img src="./assets/images/CarlosParedes.png" alt="carlos">
+            </div>
+          </div>
+        </section>
+      </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
   </div>
 
-
-
-
-
-
-  <!--Libraries-->
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      mousewheel: true,
+      loop:true,
+      centeredSlides: false,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 100,
+        stretch: 100,
+        depth: 20,
+        modifier: 1,
+        slideShadows: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+    var swiper = new Swiper(".mySwiper2", {
+      effect: "coverflow",
+      grabCursor: true,
+      mousewheel: true,
+      loop:true,
+      centeredSlides: false,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 100,
+        stretch: 100,
+        depth: 20,
+        modifier: 1,
+        slideShadows: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
 </body>
 
 </html>

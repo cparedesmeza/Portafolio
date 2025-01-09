@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet');
 
 :root{
@@ -6,21 +7,84 @@
     --font-family: 'Noto Serif',Serif;
     --button-color: #FCBF5A;
 }
+html,
+body {
+
+}
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  display: flex;
+  align-items:  center;
+  justify-content: center;
+}
+
+.swiper .swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Estilo de los elementos del grid */
+.grid-element {
+ 
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Efecto al pasar el mouse */
+.grid-element:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo de las imágenes */
+.grid-element img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+
+
 body{
     font-family: var(--font-family) !important;
     color: var(--text-color);
-    background: black !important;
+    background: black ;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 15px;
+    position: relative;
+    height: 100%;
 }
 
 .navbar{
     position: fixed;
-    top: 38rem;
+    top: 5rem;
     left: 1rem;
     max-width: fit-content;
     background-color: rgb(33,34,29,0.7);
@@ -31,19 +95,9 @@ body{
     font-size: clamp(16px,4vw +1rem,30px);
     display: flex;
     flex-direction: row;
+    z-index: 1000;
 }
-.navbar-nav{
-  display:flex;
-  flex-direction: row;
-  gap:30px;
-  list-style: none;
-  
-}
-.nav-link{
-    text-decoration: none;
-    color: var(--text-color) !important;
-    text-transform: uppercase;
-}
+
 .btn-header{
     text-decoration: none;
     color: var(--text-color-secondary);
@@ -53,58 +107,27 @@ body{
     font-weight: bolder;
     text-transform: uppercase;
 }
-.overlay {
-  z-index: 2;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.825);
-  overflow: hidden;
-}
-.overlay-slide-right {
-  transition: all 0.8s ease-In-out;
-  transform: translateX(0) translateY(0);
-}
-.overlay-slide-left {
-  transition: all 0.8s ease-in-out;
-  transform: translateX(-100%) translateY(-100%);
-}
 
-/*Scroll Panel*/
-.container-horizontal {
-  display: flex;
-  height: 940vh; /* Ocupa toda la altura de la ventana */
-  width: 100vw; /* Ancho total para 4 paneles */
-  overflow-x: visible; /* Evita que aparezcan barras de desplazamiento no deseadas */
-  scroll-snap-type: x mandatory; /* Activa el ajuste de desplazamiento */
-  padding: 0;
-  margin: 0;
-}
 
-/* Estilos para cada panel */
-.panel {
-    flex: 0 0 100vw; /* Cada panel ocupa todo el ancho de la ventana */
-    height: 100vh; /* Ocupa toda la altura de la ventana */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    scroll-snap-align: start; /* Alineación para el ajuste de desplazamiento */
-}
+
+
+
+
 
 
 /* Section: Slider */
 
 .slider{
-  background-image: url('/assets/images/Background.png');
+  background-image: url('../images/Background.png');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   display:flex;
   flex-direction: column;
   align-items: start;
   justify-content: center;
+  height: 100vh;
+  width: 100vw;
 }
 .btnResume{
   text-decoration:none;
@@ -115,7 +138,7 @@ body{
   font-size: 25px;
   text-transform: uppercase;
   padding: 1px 30px;
-  margin: 0px 20rem;
+  margin: 30px 20rem;
 }
 .title{
   font-size: 5rem;
@@ -191,7 +214,8 @@ body{
   align-items: center;
   background-color: white;
   box-shadow:inset 5px 0px 5px rgba(0,0,0,0.7), inset -5px 0px 5px rgba(0,0,0,0.7);
-  padding: 2rem;
+  height: 100vh;
+  width: 100vw;
 }
 .works-title{
   font-size: 6rem;
@@ -199,11 +223,12 @@ body{
   margin:0;
 }
 .projects{
-  width: 75%;
+  width: 100% ;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
+ 
 }
 .projectContent{
   display:flex;
@@ -220,6 +245,7 @@ body{
 .projects-icons{
   max-width: 50%;
   display: grid;
+  display:none;
   justify-items: center;
   grid-template-columns: repeat(4,100px);
   gap: 0;
@@ -229,16 +255,9 @@ body{
   font-size: 48px;
   color: var(--text-color-secondary);
 }
-.swiper-slide{
-  max-width: 200px;
-  max-height: 200px;
-  box-shadow: 0px 5px 5px rgb(0,0,0,0.5);
-  margin: 10px 0px;
-}
-.swiper-slide img{
-  width: 200px;
-  height: 200px;
-}
+
+
+
 
 /*Section 4*/
 .FAQS-container{
@@ -376,7 +395,7 @@ body{
     color: var(--text-color-secondary);
   }
   .swiper-slide{
-    width: 150px;
+    width: 200px;
     height: 150px;
     margin: 0;
     
@@ -407,16 +426,6 @@ body{
     font-size: 1rem;
     padding: 0 1rem;
   }
-  .container-horizontal {
-    height: 500vh; /* Ocupa toda la altura de la ventana */
-    width: 100vw; /* Ancho total para 4 paneles */    
-  }
-  
-  /* Estilos para cada panel */
-  .panel {
-      flex: 0 0 90vw; /* Cada panel ocupa todo el ancho de la ventana */
-      height: 100vh; /* Ocupa toda la altura de la ventana */
-   }
 
 
 
@@ -487,24 +496,13 @@ body{
   }
   
   /* Estilos para cada panel */
-  .panel {
-      flex: 0 0 100vw; /* Cada panel ocupa todo el ancho de la ventana */
-      height: 100vh; /* Ocupa toda la altura de la ventana */
-   }
+
    .dropbtn0, .dropdown-content{
       font-size: 0.7rem;
    }
 
 }
 @media (max-width:400px) {
-  .container-horizontal {
-    height: 305vh; /* Ocupa toda la altura de la ventana */
-    width: 100vw; /* Ancho total para 4 paneles */    
-  }
-  .panel {
-    flex: 0 0 100vw; /* Cada panel ocupa todo el ancho de la ventana */
-    height: 100vh; /* Ocupa toda la altura de la ventana */
- }
   .projects-paragraph{
     width: 100%;
   }
