@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Swiper demo</title>
+  <title>Portafolio Carlos Paredes Meza</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -186,7 +186,6 @@
       effect: "coverflow",
       grabCursor: true,
       mousewheel: true,
-      loop:true,
       centeredSlides: false,
       slidesPerView: "auto",
       coverflowEffect: {
@@ -200,26 +199,19 @@
         el: ".swiper-pagination",
         clickable: true,
       },
-    });
-    var swiper = new Swiper(".mySwiper2", {
-      effect: "coverflow",
-      grabCursor: true,
-      mousewheel: true,
-      loop:true,
-      centeredSlides: false,
-      slidesPerView: "auto",
-      coverflowEffect: {
-        rotate: 100,
-        stretch: 100,
-        depth: 20,
-        modifier: 1,
-        slideShadows: false,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
+      breakpoints:{
+        400:{
+          slidesPerView: 1,
+          spaceBetween: 300,
+          coverflowEffect:{
+            rotate: 10,
+            stretch: 100,
+            depth: 1,
+          },
+        }
       },
     });
+    
   </script>
 </body>
 
